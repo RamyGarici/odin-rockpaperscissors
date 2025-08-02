@@ -1,7 +1,72 @@
+*{
+
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+a{
+    color: black;
+    font-size: 50px;
+    text-decoration: none;
+ 
+}
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+}
+
 .score-container{
     display: flex;
-    width: 90%;
+    padding-top: 30px;
     font-size: 25px;
-    padding: 50px;
+    padding-inline: 200px;
+    gap: 200px;
     justify-content: space-between;
+}
+
+.game {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    padding-top: 50px;
+    color: red;
+}
+#vs{
+    color: black;
+    padding-top: 20px;
+}
+.img{
+    width: 100px;
+    height: auto;
+}
+.images{
+    display: flex;
+    justify-content: space-between;
+    gap: 100px;
+    padding: 20px;
+}
+
+p{
+    margin-top: 30px;
+    font-size: 30px;
+  
+    text-align: center;
+}
+
+button{
+    margin-top: 30px;
+    
+    background-color: red;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    border-radius: 20px;
+    height: 150px;
+    width: 350px;
 }
