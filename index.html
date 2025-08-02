@@ -16,20 +16,20 @@
     </div>
 
     <div class="game">
-      <h1>You Won!</h1>
+      <h1 id="win-msg">You Won!</h1>
       <div class="images">
-      <img class="img" src="./assets/scissors.png">
+      <img id="player-img" class="img" src="./assets/paper.png">
       <h2 id="vs">VS</h2>
-      <img class="img"  src="./assets/fist.png">
+      <img id="computer-img" class="img"  src="./assets/rock.png">
       </div>
     </div>
 
     <div class="choice">
       <p>Choose your move, rock, paper, or scissors?</p>
       <div class="boxes">
-        <button>Rock</button>
-        <button>Paper</button>
-        <button>Scissors</button>
+        <button onclick="getPlayerChoice('rock')">Rock</button>
+        <button onclick="getPlayerChoice('paper')">Paper</button>
+        <button onclick="getPlayerChoice('scissors')">Scissors</button>
       </div>
     </div>
 

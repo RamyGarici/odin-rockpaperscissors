@@ -1,36 +1,41 @@
-function getComputerChoice(){
-      const choices=["Rock","Paper","Scissors" ];
+
+let playImage = document.getElementById("player-img")
+let computerImage = document.getElementById("computer-img")
+let winMessage = document.getElementById("win-msg")
+
+
+function getComputerChoice(choice){
+      const choices=["rock","paper","scissors" ];
       const computerChoice= choices[Math.floor(Math.random()*3)];
+      computerImage.src = `./assets/${computerChoice}.png`;
+      getWinner(choice,computerChoice);
 
-
-      return computerChoice;
     }
 
-    function getPlayerChoice(){
-    //  const choice= prompt("Choose(Rock, Paper, Scissors)");
-     return choice;
+
+    function getPlayerChoice(choice){
+      
+        playImage.src = `./assets/${choice}.png`;
+        getComputerChoice(choice);
+ 
     }
+
+
+
+
     function getWinner(play,comp){
-      if (play== "Rock" && comp=="Scissors" ){ return "You";
+      if (play== "rock" && comp=="scissors" ){ winMessage.innerText = "You Won!";
 
       }
-      else if (play=="Scissors" && comp=="Rock"){return "Computer";}
-      else if(play=="Rock" && comp=="Paper"){return "Computer;"}
-      else if(play==comp){return "Nobody, it's a draw";}
-      else if (play=="Paper" && comp=="Scissors"){return "Computer";}
-      else if (play=="Paper" && comp=="Rock"){return "Computer";}
-      else if (play=="Scissors" && comp=="Paper"){return "You";}
-     
-      
-      
+      else if (play=="scissors" && comp=="rock"){winMessage.innerText = "You Lose";}
+      else if(play=="rock" && comp=="paper"){ winMessage.innerText = "You Lose";}
+      else if(play==comp){winMessage.innerText = "Draw";}
+      else if (play=="paper" && comp=="scissors"){winMessage.innerText = "You Lose";}
+      else if (play=="paper" && comp=="rock"){winMessage.innerText = "You Lose";}
+      else if (play=="scissors" && comp=="paper"){winMessage.innerText = "You Won!";}
     }
 
 
 
    
-    let playerChoice = getPlayerChoice();
-    let computerChoice = getComputerChoice()
-     console.log("Computer chose "+ computerChoice);
-     console.log("Player chose "+ playerChoice);
-     winner= getWinner(playerChoice, computerChoice)
-     console.log("The winner is " + winner)
+ 
