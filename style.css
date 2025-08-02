@@ -1,0 +1,7 @@
+.score-container{
+    display: flex;
+    width: 90%;
+    font-size: 25px;
+    padding: 50px;
+    justify-content: space-between;
+}
